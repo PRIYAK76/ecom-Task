@@ -22,6 +22,9 @@ const ProductPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const addToCart = (productId) => {
+    setCartItems([...cartItems, productId]);
+  };
   return (
     <Layout>
       {data.overAllProducts
@@ -122,7 +125,7 @@ const ProductPage = () => {
                       </select>
                     </div>
 
-                    <button className="buy-now">Buy Now</button>
+                    <button className="buy-now" onClick={() => addToCart(prod.productId)}>Buy Now</button>
 
                     <div className="add-cart mb-4">
                       <button className="cart-btn">Add to cart</button>
