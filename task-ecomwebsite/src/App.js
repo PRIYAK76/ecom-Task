@@ -6,6 +6,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./components/signIn/SignIn";
 import Home from './pages/home/Home';
 import ForgotPassWord from './components/forgotPassword/ForgotPassWord';
+import Men from './pages/collections/men/Men';
+import Women from './pages/collections/women/Women';
+import ProductPage from './pages/Product Page/ProductPage';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Routes>
       <Route path="/" element={<SignIn />} />
       <Route path="/home" element={<Home />} />   
+      <Route path="/men" element={<Men />} />   
+      <Route path="/women" element={<Women />} />
+      <Route path="/products/:productID" element={<ProductPage />} />
       <Route path="/forgotPassword" element={<ForgotPassWord />} />      
       </Routes>
     </div>

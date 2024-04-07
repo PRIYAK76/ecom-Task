@@ -71,11 +71,11 @@ const SignIn = () => {
                                 </div>
                                 <div class="col-auto my-1  d-flex justify-content-between">
                                     <div class="form-check  d-flex custom-checkbox " onClick={handleCheckboxChange}>
-                                        {/* <input
+                                        <input
                                             type="checkbox"
                                             id="rememberMeCheckbox"
-                                        /> */}
-                                        <div class={`checkbox ${isChecked ? 'checked' : ''}`}></div>
+                                        />
+                                        {/* <div class={`checkbox ${isChecked ? 'checked' : ''}`}></div> */}
                                         <label class="form-check-label ff remember" for="autoSizingCheck2">
                                             Remember me
                                         </label>

@@ -131,7 +131,7 @@ const Navbar1 = () => {
               </div>
 
               <div className="d-flex tab-menu d-flex justify-content-start">
-                <NavLink to="/sale" className="text-decoration-none">
+                <NavLink to="/men" className="text-decoration-none">
                   <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
                     <a href="#">Men</a>
                     <div class="mega_menu sub_menu d-flex justify-content-evenly">
@@ -169,7 +169,7 @@ const Navbar1 = () => {
                   </li>
                 </NavLink>
 
-                <NavLink to="/" className="text-decoration-none">
+                <NavLink to="/women" className="text-decoration-none">
                   <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
                     <a href="#">Women</a>
                     <div class="mega_menu sub_menu d-flex justify-content-evenly">
@@ -178,7 +178,7 @@ const Navbar1 = () => {
                         {data.Women.types.map((s) => (
                           <li className="submenu-item">
                             <a href="#" className="submenu-link">
-                              {s}i
+                              {s}
                             </a>
                           </li>
                         ))}
@@ -207,7 +207,7 @@ const Navbar1 = () => {
                   </li>
                 </NavLink>
 
-                <NavLink to="/" className="text-decoration-none">
+                <NavLink to="/kids" className="text-decoration-none">
                   <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
                     <a href="#">Kids</a>
                     <div class="mega_menu sub_menu d-flex justify-content-evenly">
