@@ -26,7 +26,7 @@ const ForgotPassWord = () => {
                   />
                 </div>
                 <div class="col-auto my-3 ">
-                <div class="captcha">
+                {/* <div class="captcha">
                     <div class="spinner">
                       <label>
                         <input
@@ -42,7 +42,7 @@ const ForgotPassWord = () => {
                     <div class="logo">
                       <img src="https://seeklogo.com/images/R/recaptcha-logo-B20692A07D-seeklogo.com.png" alt="logo"/>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div class="col-auto my-1 mt-3">
                   <button type="submit" class="sign-in-btn ff">
