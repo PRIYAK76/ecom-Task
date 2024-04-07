@@ -1,0 +1,110 @@
+{
+  "Kids": [
+    "Shirts",
+    "Skirts",
+    "Shorts",
+    "Clothing Sets",
+    "Ethnic Wear",
+    "Party wear"
+  ],
+  "Men": [
+    "T-shirts",
+    "Casual shirt",
+    "Sweatshirts",
+    "Jackets",
+    "Blazers ",
+    "Suits",
+    "Rain Jackets",
+    "Casual shirt"
+  ],
+  "WomenCollections": [
+    "Kurti & Suits",
+    "Sarees",
+    "Skirts & Palazzos",
+    "Jackets",
+    "Maternity Wear"
+  ],
+  "WomenCollections1": [
+    "Lounge Wear",
+    "Sports and Active Wear",
+    "Dress materials",
+    "T-shirts",
+    "Jumpsuits"
+  ],
+  "MenCollections":[
+    "T-shirts",
+    "Casual shirt",
+    "Sweatshirts",
+    "Jackets"
+  ],
+  "MenCollections1":[
+    "Blazers ",
+    "Suits",
+    "Rain Jackets",
+    "Casual shirt"
+  ],
+  "KidsCollections": [
+    "Shirts",
+    "Skirts",
+    "Shorts"
+  ],
+  "KidsCollections1": [
+    "Clothing Sets",
+    "Ethnic Wear",
+    "Party wear"
+  ],
+  "LivingRoom": [
+    "Home Decor",
+    "Ceiling Lights",
+    "Wall art",
+    "Travel Accessories"
+  ],
+  "LivingRoom1": [
+    "Plants",
+    "Furniture",
+    "Storage",
+    "Luggage"
+  ],
+  "Exploreproductcards": [
+    { "img": "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Red dotted Frock","price":"$678" },
+    { "img": "https://img.freepik.com/free-photo/woman-green-dress-hat-yellow-background_1303-10512.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Green striped","price":"$246" },
+    { "img": "https://img.freepik.com/free-photo/lifestyle-portrait-woman-posing-outdoors-with-her-portable-tablet-pc_1098-20724.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Off shouldered top","price":"$456" },
+    {"img":"https://img.freepik.com/free-photo/beautiful-girl-street_1157-4709.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Pink & Beige floral","price":"$243"}
+  ],
+  "ExploreproductcardsMen": [
+    { "img": "https://img.freepik.com/free-photo/full-length-portrait-handsome-serious-man_171337-17388.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Navy Satin Blazer","price":"$678","badge":"New" },
+    { "img": "https://i.pinimg.com/736x/5a/ea/b3/5aeab3de14bbf880a13b9af99cf07230.jpg","name":"Denim Jackets","price":"$246","badge":"" },
+    { "img": "https://thehouseofrare.com/cdn/shop/products/IMG_0366_028913da-c688-4f35-af2a-2f2680be5701.jpg?v=1678608969","name":"Linen Manadarin Collar","price":"$456" },
+    {"img":"https://cottonworld.net/cdn/shop/products/M-TSHIRT-16867-20419-LIGHTGREY_6.jpg?v=1666154933","name":"Light Grey Regular Fit","price":"$243","badge":"30% Off"}
+  ],
+  "ExploreproductcardsKids": [
+    { "img": "https://img.freepik.com/free-photo/full-shot-kid-with-sunglasses_23-2149067155.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Printed Jackets","price":"$438","badge":"New" },
+    { "img": "https://img.freepik.com/free-photo/little-girl-cute-dress_1303-13465.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Fairy Frock","price":"$246","badge":"" },
+    { "img": "https://img.freepik.com/premium-photo/expressive-girl-dress_136403-8751.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Regular Maxi Yellow","price":"$486" },
+    {"img":"https://img.freepik.com/free-photo/kids-pajama-with-birthday-party-pattern_53876-105715.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Night suit","price":"$232","badge":"30% Off"}
+  ],
+  "ExploreproductcardsLiving": [
+    { "img": "https://img.freepik.com/free-photo/gray-sofa-brown-living-room-with-copy-space_43614-954.jpg?w=900&t=st=1702277756~exp=1702278356~hmac=d82c09528e4eac5ff6d578748df681e7aa2f041bf1ccf3c20b9af3c2e542ee5b","name":"Gray Sofa","price":"$4308","badge":"New" },
+    { "img": "https://img.freepik.com/free-photo/wood-sideboard-living-room-interior-with-copy-space_43614-827.jpg?w=900&t=st=1702277816~exp=1702278416~hmac=914ff15e532181142214d79587b95c76d5a433e6603f5e1d6816b273f912a180ttps://img.freepik.com/free-photo/little-girl-cute-dress_1303-13465.jpg?size=626&ext=jpg&ga=GA1.1.993714161.1690437805&semt=ais","name":"Wood sideboard","price":"$1246","badge":"" },
+    { "img": "https://img.freepik.com/free-photo/popular-potted-houseplants-white-background_53876-127000.jpg?w=900&t=st=1702277935~exp=1702278535~hmac=6fa5d940a020a621541962f52a41c7a8f0d039c1d069593bdc0abd29c2d93180","name":"Potted houseplants","price":"$486" },
+    {"img":"https://img.freepik.com/free-photo/buddha-statue-nature_23-2151033741.jpg?t=st=1702278052~exp=1702281652~hmac=2a614f50e957fc0afbaac3053dd4912bf499b0f2ee2b97cc201d00e51f7a06d7&w=360","name":"Buddha Statue","price":"$232","badge":"30% Off"}
+  ],
+  "Form": [
+    {"head":"Product Name","type":"text","placeholder":"Enter product name"},
+    {"head":"Item number","type":"integer","placeholder":"Enter item number"},
+    {"head":"Product  Description","type":"text","placeholder":"Add product description"},
+    {"head":"Product Category","type":"integer","placeholder":"Enter item number"},
+    {"head":"Item number","type":"integer","placeholder":"Enter item number"},
+    {"head":"Item number","type":"integer","placeholder":"Enter item number"}
+  ],
+  "Footer":[
+    {
+      "title":"Products",
+      "subtitle":["Categories", "New Arrival", "Popular", "Sale"]
+    },
+    {
+      "title1":"Company",
+      "subtitle1":["Help Center", "News", "Careers", "Terms of Service"]
+    }
+  ]
+}
