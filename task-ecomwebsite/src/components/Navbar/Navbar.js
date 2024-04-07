@@ -9,25 +9,42 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { IoIosArrowDown } from "react-icons/io";
 import menu from "../../datas/mobiledata.json";
+import { RiMenu2Line } from "react-icons/ri";
 import "./Navbar.css";
+
 const Navbar1 = () => {
   return (
     <div>
       <nav>
         <div class="container">
           <div class="row justify-content-between mobile_btn">
-            <div class="col-4">
-              <div>
+            <div class="col d-flex justify-content-between">
+              
                 <button
                   className="ham-menu"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#demo"
                 >
-                  <i class="fas fa-bars hamburger-icon"></i>
+                 <RiMenu2Line size={25} /> 
                 </button>
-              </div>
+                <div>Jaspo</div>
+              <NavLink to="/addtocart">
+                  <svg
+                    class="mobmenu-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M7.42729 18.9078C8.25664 18.9078 8.93611 19.6018 8.93611 20.459C8.93611 21.306 8.25664 22 7.42729 22C6.58794 22 5.90847 21.306 5.90847 20.459C5.90847 19.6018 6.58794 18.9078 7.42729 18.9078ZM18.6685 18.9078C19.4979 18.9078 20.1774 19.6018 20.1774 20.459C20.1774 21.306 19.4979 22 18.6685 22C17.8292 22 17.1497 21.306 17.1497 20.459C17.1497 19.6018 17.8292 18.9078 18.6685 18.9078ZM2.88103 2.00871L5.26418 2.37507C5.60391 2.43732 5.85372 2.72204 5.88369 3.06902L6.07354 5.35496C6.10352 5.68254 6.36332 5.92746 6.68307 5.92746H20.1776C20.7871 5.92746 21.1868 6.14177 21.5865 6.6112C21.9861 7.08064 22.0561 7.75417 21.9662 8.36546L21.0169 15.06C20.837 16.3469 19.7579 17.2949 18.4889 17.2949H7.58736C6.2584 17.2949 5.15926 16.255 5.04934 14.9079L4.13006 3.78337L2.62124 3.51804C2.22155 3.44661 1.94176 3.04861 2.01171 2.6404C2.08166 2.22301 2.47135 1.94646 2.88103 2.00871ZM16.8901 9.70233H14.1223C13.7026 9.70233 13.3729 10.0391 13.3729 10.4677C13.3729 10.8861 13.7026 11.2331 14.1223 11.2331H16.8901C17.3098 11.2331 17.6395 10.8861 17.6395 10.4677C17.6395 10.0391 17.3098 9.70233 16.8901 9.70233Z"
+                      fill="#26221F"
+                    />
+                  </svg>
+                </NavLink>
             </div>
-            <div class="col-4 text-end">
+            {/* <div class="col-4 text-end">
               <button className="ham-menu">
                 <svg
                   class="mobmenu-icons"
@@ -69,7 +86,7 @@ const Navbar1 = () => {
                   </svg>
                 </NavLink>
               </button>
-            </div>
+            </div> */}
             <div>
               <div class="offcanvas offcanvas-start mob-navmenu" id="demo">
                 <div class="offcanvas-header1">
@@ -90,7 +107,7 @@ const Navbar1 = () => {
                         aria-controls="panel1-content"
                         id="panel1-header"
                       >
-                        {i.name}
+                        <NavLink to={i.navlink}>{i.name}</NavLink>
                       </AccordionSummary>
                       <AccordionDetails>
                         {i.subMenu.map((ikk) => (

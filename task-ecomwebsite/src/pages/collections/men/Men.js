@@ -18,55 +18,56 @@ const Men = () => {
     return (
         <Layout>
           
-            <div className='product-card-filter-page'>
-                {data.products.map((product) => (
-                    <div className="product-card">
-                    <button className="image-btn">
-                      <NavLink to={`/products/${product.productId}`}>
-                        <img
-                          src={product.searchImage}
-                          className="product-cart-image"
-                          alt=""
+          {data.productsimg
+        .filter((item) => item.name === "men")
+        .map((items) => (
+          <div className='product-card-filter-page'>
+            {items.ProductsDetails.map((product) => (
+              <div className="product-card">
+                <button className="image-btn">
+                  <NavLink to={`/products/${product.productId}`} >
+                    <img
+                      src={product.searchImage}
+                      className="product-cart-image"
+                      alt=""
+                    />
+                  </NavLink>
+                </button>
+                <span>
+                  <IoMdHeartEmpty size={27} className="wishlist-icon" />
+
+                  {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} className="wishlist-icon" /> */}
+                </span>
+
+                <h1 className="product-card-name1 mt-2 text-center fw-bold">
+                  {product?.productName?.substring(11, 30)}
+                </h1>
+
+
+                <div className="d-flex justify-content-between">
+                  <div className='d-flex'><p className="product-card-price mt-2">
+                    ${product.price}&nbsp;&nbsp;
+                  </p>
+                    <div className="stars mt-1">
+                      <Stack spacing={1}>
+                        <Rating
+                          name="size-small"
+                          defaultValue={product?.rating?.toFixed(2)}
+                          precision={0.5}
+                          readOnly
+                          size="small"
                         />
-                      </NavLink>
-                    </button>
-          
-                    <span>
-                      <IoMdHeartEmpty size={27} className="wishlist-icon" />
-                      
-                      {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} className="wishlist-icon" /> */}
-                    </span>
-          
-                    <h1 className="product-card-name1 mt-2 text-center fw-bold">
-                      {product.productName.substring(11, 30)}
-                    </h1>
-          
-                    
-                    <div className="d-flex justify-content-between">
-                      <div className='d-flex'><p className="product-card-price mt-2">
-                        ${product.price}&nbsp;&nbsp;
-                      </p>
-                      <div className="stars mt-1">
-                        <Stack spacing={1}>
-                          <Rating
-                            name="size-small"
-                            defaultValue={product.rating.toFixed(2)}
-                            precision={0.5}
-                            readOnly
-                            size="small"
-                          />
-                        </Stack>
-                      </div></div>
-                      <div className="d-flex mx-auto ">
-                        {/* Add to cart &nbsp; */}
-                        <BsFillCartPlusFill size={25} />
-                      </div>
-                    </div>
-          
-                    
+                      </Stack>
+                    </div></div>
+                  <div className="d-flex mx-auto ">
+                    {/* Add to cart &nbsp; */}
+                    <BsFillCartPlusFill size={25} />
                   </div>
-                ))}
-            </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
         </Layout>
     )
 }

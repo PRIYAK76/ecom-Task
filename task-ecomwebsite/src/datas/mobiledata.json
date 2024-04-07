@@ -1,6 +1,7 @@
 [
   {
     "name": "Men",
+    "navlink":"/men",
     "subMenu": [
       {
         "title": "Topwear",
@@ -44,6 +45,7 @@
 
   {
     "name": "Women",
+    "navlink":"/women",
     "subMenu": [
       {
         "title": "Indian & Fusion Wear",
@@ -88,6 +90,7 @@
 
   {
     "name": "Kids",
+    "navlink":"/kids",
     "subMenu": [
       {
         "title": "Boys Clothing",

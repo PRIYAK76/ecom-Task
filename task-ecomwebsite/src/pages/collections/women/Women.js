@@ -18,8 +18,9 @@ const Women = () => {
 
   return (
     <Layout>
-      <div >
-        {data.productsimg.map((items) => (
+      {data.productsimg
+        .filter((item) => item.name === "women")
+        .map((items) => (
           <div className='product-card-filter-page'>
             {items.ProductsDetails.map((product) => (
               <div className="product-card">
@@ -67,7 +68,6 @@ const Women = () => {
             ))}
           </div>
         ))}
-      </div>
     </Layout>
   )
 }

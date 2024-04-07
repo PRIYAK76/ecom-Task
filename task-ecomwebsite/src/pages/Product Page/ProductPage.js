@@ -15,7 +15,6 @@ const ProductPage = () => {
   const pathnameSegments = location.pathname.split("/");
   const targetSegmentIndex = 2;
   const targetSegment = pathnameSegments[targetSegmentIndex] || "Not Found";
-
   // const [counter, setCounter] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
 
@@ -25,17 +24,19 @@ const ProductPage = () => {
 
   return (
     <Layout>
-      {/* {dataMyntra.products
+      {data.overAllProducts
         .filter((item) => {
-          return targetSegment == item.productId;
+          return targetSegment == item.productId
         })
-        .map((i) => (
+        .map((prod) => (
           <div>
             <div className="container product">
               <div class="row">
                 <div class="col-sm-7 image-view-block align-self-start">
                   <div className="lap-screen-image-carousel">
-                    {item.images.map((imag) => (
+                    {prod.images
+                    .slice(0,4)
+                    .map((imag) => (
                       <img
                         className="product-image-block"
                         src={imag.src}
@@ -45,7 +46,7 @@ const ProductPage = () => {
                   </div>
 
                   <Carousel fade className="mobile-screen-carousel">
-                    {item.images.map((path, index) => (
+                    {prod.images.map((path, index) => (
                       <Carousel.Item key={index}>
                         <img
                           className="product-image-block"
@@ -59,25 +60,25 @@ const ProductPage = () => {
                 <div class="col-sm-5  align-self-start">
                   <div class="description">
                     <h4 className="product-page-product-name">
-                      {item.productName}
+                      {prod.productName}
                     </h4>
                     <div className="star">
                       <Stack spacing={1}>
                         <Rating
                           name="half-rating-read"
-                          defaultValue={i.rating.toFixed(2)}
+                          defaultValue={prod.rating.toFixed(2)}
                           precision={0.5}
                           readOnly
                         />
                       </Stack>
-                      {i.rating.toFixed(2)} Ratings
+                      {prod.rating.toFixed(2)} Ratings
                     </div>
 
-                    <h4 className="price">${i.price}</h4>
+                    <h4 className="price">${prod.price}</h4>
                     <h4 className="taxes">Inclusive of all taxes</h4>
 
                     <div className="size">
-                      {i.sizes.map((k) => (
+                      {prod.sizes.map((k) => (
                         <label class="custom-radio-label">
                           <div class="custom-radio"></div>
                           <p
@@ -158,7 +159,7 @@ const ProductPage = () => {
                     <div className="" key={j}>
                       <div className="item-sec">
                         <h4 className="fw-bold mb-4">Product Description</h4>
-                        <h6 className="mb-4">Item No. {i.productId}</h6>
+                        <h6 className="mb-4">Item No. {prod.productId}</h6>
                         <p className="text-justify">{des.description}</p>
 
                         <div>
@@ -167,67 +168,11 @@ const ProductPage = () => {
                           ))}
                         </div>
                       </div>
-
-                      <div className="mt-5">
-                        <h4 className="fw-bold mb-2 check-del">
-                          Check for delivery
-                        </h4>
-                        <div className="del-input">
-                          <input
-                            class="pin-input"
-                            type="number"
-                            placeholder="Enter Pincode"
-                            pattern="[1-9]{1}[0-9]{5}"
-                          />
-                          <button className="check-btn" type="submit">
-                            Check
-                          </button>
-                        </div>
-                      </div>
                     </div>
                   ))}
-
-                  <div className="cust-review">
-                    <h4 className="fw-bold mb-4">Customer Reviews</h4>
-                    <div className="ratings">
-                      <Stack spacing={1}>
-                        <Rating
-                          name="half-rating-read"
-                          defaultValue={i.rating.toFixed(2)}
-                          precision={0.5}
-                          readOnly
-                        />
-                      </Stack>
-                      {i.rating.toFixed(2)} of 5
-                    </div>
-                    <div className="star-rating">
-                      <ul>
-                        {[...Array(5)].map((_, index) => (
-                          <li className="rate-list d-flex">
-                            {index + 1} stars
-                            <div className="rate-slider"></div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    Based on all customer reviews
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))} */}
-        {data.productsimg.map((prod) => (
-          <div>
-            {prod.ProductsDetails.filter((item) => {
-              console.log(item.productId + "hjb" + targetSegment)
-              return targetSegment === item.productId;
-
-            })
-            .map((item) => (
-              <div>{item.productId}</div>
-            ))
-            }
           </div>
         ))}
     </Layout>
