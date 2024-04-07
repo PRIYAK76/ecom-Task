@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Men",
+    "subMenu": [
+      {
+        "title": "Topwear",
+        "products": [
+          "Tshirts",
+          "Casual Shirts",
+          "Sweatshirts",
+          "Jackets",
+          "Blazers ",
+          "Suits",
+          "Rain Jackets"
+        ]
+      },
+
+      {
+        "title": "Bottomwear",
+        "products": [
+          "Jeans",
+          "Casual Trousers",
+          "Formal Trousers",
+          "Shorts",
+          "Track Pants & Joggers",
+          "Dhotis",
+          "Boxers",
+          "Vests"
+        ]
+      },
+
+      {
+        "title": "Sports & Active Wear",
+        "products": [
+          "Active T-shirts",
+          "Track Pants & Shorts",
+          "Tracksuits",
+          "Jackets & Sweatshirts",
+          "Swimwear"
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Women",
+    "subMenu": [
+      {
+        "title": "Indian & Fusion Wear",
+        "products": [
+          "Kurtas & Suits",
+          "Sarees",
+          "Leggings and Pants",
+          "Skirts",
+          "Lehenga Cholis",
+          "Duppattas"
+        ]
+      },
+
+      {
+        "title": "Western Wear",
+        "products": [
+          "Dresses",
+          "Tops",
+          "Tshirts",
+          "Jeans",
+          "Trousers",
+          "Playsuits",
+          "Shrugs",
+          "Playsuits",
+          "Sweatshirts",
+          "Blazers & Waistcoats"
+        ]
+      },
+
+      {
+        "title": "Others",
+        "products": [
+          "Active wear",
+          "Lingerie",
+          "Sleepwear",
+          "Shapewear",
+          "Loungewear"
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "Kids",
+    "subMenu": [
+      {
+        "title": "Boys Clothing",
+        "products": [
+          "T-shirts",
+          "Shirts",
+          "Shorts",
+          "Jeans",
+          "Trousers",
+          "Ethnic Wear",
+          "Party Wear"
+        ]
+      },
+
+      {
+        "title": "Girls Clothing",
+        "products": [
+          "Dresses",
+          "Tops",
+          "Tshirts",
+          "Clothing sets",
+          "Lehengha Cholis",
+          "Kurta Sets",
+          "Party Wear",
+          "Dungarees & Jumpsuits",
+          "Tights & Leggings",
+          "Nightwear & Loungewear",
+          "Jeans, Trousers & Sweatshirts1"
+        ]
+      },
+
+      {
+        "title": "Infants",
+        "products": [
+          "Bodysuits",
+          "Rompers & Sleepsuits",
+          "Clothing sets",
+          "Bottom wear",
+          "Winter wear",
+          "Infant Care"
+        ]
+      }
+    ]
+  }
+]

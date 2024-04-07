@@ -1,0 +1,95 @@
+{
+  "Women":{
+    "id": "Indian & Fusion Wear",
+    "types":[
+      "Kurtas & Suits",
+      "Sarees",
+      "Leggings and Pants",
+      "Skirts",
+      "Lehenga Cholis",
+      "Duppattas"
+    ],
+
+    "categories": "Western Wear",
+    "kinds": [
+      "Dresses",
+      "Tops",
+      "Tshirts",
+      "Jeans",
+      "Playsuits",
+      "Sweatshirts",
+      "Blazers & Waistcoats"
+    ],
+
+    "sorts": "Others",
+    "sort": [
+      "Active wear",
+      "Lingerie",
+      "Sleepwear",
+      "Shapewear",
+      "Loungewear"
+    ]    
+  },
+
+  "Men":{
+    "id": "Topwear",
+    "types":[
+      "Tshirts",
+      "Casual Shirts",
+      "Sweatshirts",
+      "Jackets",
+      "Blazers ",
+      "Suits",
+      "Rain Jackets"
+    ],
+
+    "categories": "Bottomwear",
+    "kinds": [
+      "Jeans",
+      "Casual Trousers",
+      "Formal Trousers",
+      "Shorts",
+      "Track Pants & Joggers"
+    ],
+
+    "sorts": "Sports & Active Wear",
+    "sort": [
+      "Active T-shirts",
+      "Track Pants & Shorts",
+      "Tracksuits",
+      "Jackets & Sweatshirts",
+      "Swimwear"
+    ]    
+  },
+
+  "Kids":{
+    "id": "Boys Clothing",
+    "types":[
+      "T-shirts",
+      "Shirts",
+      "Jeans",
+      "Trousers",
+      "Ethnic Wear",
+      "Party Wear"
+    ],
+
+    "categories": "Girls Clothing",
+    "kinds": [
+      "Dresses",
+      "Clothing sets",
+      "Dungarees & Jumpsuits",
+      "Tights & Leggings",
+      "Nightwear & Loungewear"
+    ],
+
+    "sorts": "Infants",
+    "sort": [
+      "Bodysuits",
+      "Rompers & Sleepsuits",
+      "Clothing sets",
+      "Bottom wear",
+      "Winter wear"
+    ]    
+  }
+
+}

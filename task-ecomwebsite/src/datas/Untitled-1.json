@@ -1,0 +1,885 @@
+{
+    "tenantName": "Riverworld",
+    "tenantId": "riverworld",
+    "entityTypes": [
+        {
+            "name": "leads",
+            "label": "Leads",
+            "iconName": "PEOPLE",
+            "attributes": [
+                {
+                    "name": "leadOwner",
+                    "label": "Lead Owner",
+                    "datatype": "typeAheadLookup",
+                    "displayPosition": "tableStart",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "isVisible": false
+                },
+                {
+                    "name": "firstName",
+                    "label": "First Name",
+                    "isLink": true
+                },
+                {
+                    "name": "lastName",
+                    "label": "Last Name"
+                },
+                {
+                    "name": "leadSource",
+                    "label": "Lead Source",
+                    "datatype": "lookup",
+                    "lookupName": "opportunitySource",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "leadStatus",
+                    "label": "Lead Status",
+                    "datatype": "lookup",
+                    "lookupName": "leadStatus",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "company",
+                    "label": "Company"
+                },
+                {
+                    "name": "email",
+                    "label": "Email"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "oppurtunities",
+            "label": "Opportunities",
+            "iconName": "PEOPLE",
+            "attributes": [
+                {
+                    "name": "oppurtunityOwner",
+                    "label": "Opportunity Owner",
+                    "datatype": "typeAheadLookup",
+                    "displayPosition": "tableStart",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "name",
+                    "label": "Opportunity Name",
+                    "isLink": true
+                },
+                {
+                    "name": "opportunitySource",
+                    "label": "Source",
+                    "datatype": "lookup",
+                    "lookupName": "opportunitySource",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "opportunityStage",
+                    "label": "Opportunity Stage",
+                    "datatype": "lookup",
+                    "lookupName": "opportunityStage",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "opportunityType",
+                    "label": "Opportunity Type",
+                    "datatype": "lookup",
+                    "lookupName": "opportunityType",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "probability",
+                    "label": "Probability",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "amount",
+                    "label": "Amount",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "closeDate",
+                    "label": "Close Date",
+                    "datatype": "date"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "accounts",
+            "label": "Accounts",
+            "iconName": "PEOPLE",
+            "attributes": [
+                {
+                    "name": "accountOwner",
+                    "label": "Account Owner",
+                    "datatype": "typeAheadLookup",
+                    "displayPosition": "tableStart",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "name",
+                    "label": "Account Name",
+                    "isLink": true
+                },
+                {
+                    "name": "accountType",
+                    "label": "Account Type",
+                    "datatype": "lookup",
+                    "lookupName": "accountType",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "email",
+                    "label": "Email"
+                },
+                {
+                    "name": "mobile",
+                    "label": "Mobile",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "addressLine1",
+                    "label": "Address Line",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "city",
+                    "label": "City",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "state",
+                    "label": "State",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "postal",
+                    "label": "Postal Code",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "country",
+                    "label": "Country",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "contacts",
+            "label": "Contacts",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "datatype": "string",
+                    "isLink": true,
+                    "maxLength": 40,
+                    "isVisible": false
+                },
+                {
+                    "name": "firstName",
+                    "label": "First Name",
+                    "datatype": "string",
+                    "isLink": true,
+                    "maxLength": 40
+                },
+                {
+                    "name": "lastName",
+                    "label": "Last Name",
+                    "datatype": "string"
+                },
+                {
+                    "name": "gender",
+                    "label": "Gender"
+                },
+                {
+                    "name": "email",
+                    "label": "Email"
+                },
+                {
+                    "name": "mobile",
+                    "label": "Mobile",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "addressLine1",
+                    "label": "Address Line",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "city",
+                    "label": "City",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "state",
+                    "label": "State",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "postal",
+                    "label": "Postal Code",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "country",
+                    "label": "Country",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "cases",
+            "label": "Cases",
+            "attributes": [
+                {
+                    "name": "caseOwner",
+                    "label": "Case Owner",
+                    "datatype": "typeAheadLookup",
+                    "displayPosition": "tableStart",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "contactName",
+                    "label": "Contact Name",
+                    "datatype": "typeAheadLookup",
+                    "displayPosition": "right",
+                    "lookupName": "contacts"
+                },
+                {
+                    "name": "accountName",
+                    "label": "Account Name",
+                    "datatype": "typeAheadLookup",
+                    "displayPosition": "right",
+                    "lookupName": "accounts"
+                },
+                {
+                    "name": "caseStatus",
+                    "label": "Status",
+                    "datatype": "lookup",
+                    "lookupName": "caseStatus",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "caseType",
+                    "label": "Type",
+                    "datatype": "lookup",
+                    "lookupName": "caseType",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "caseReason",
+                    "label": "Case Reason",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "caseOrigin",
+                    "label": "Case Origin",
+                    "datatype": "string",
+                    "isVisible": false
+                },
+                {
+                    "name": "casePriority",
+                    "label": "Priority",
+                    "datatype": "lookup",
+                    "lookupName": "casePriority",
+                    "isBackgroundColor": true
+                },
+                {
+                    "name": "description",
+                    "label": "Decription",
+                    "datatype": "string",
+                    "isVisible": true
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "quotes",
+            "label": "Quotes",
+            "attributes": [
+                {
+                    "name": "quoteId",
+                    "label": "Quote ID",
+                    "datatype": "string",
+                    "isLink": true,
+                    "maxLength": 40,
+                    "isVisible": true
+                },
+                {
+                    "name": "revisionNo",
+                    "label": "Revision No",
+                    "datatype": "string"
+                },
+                {
+                    "name": "price",
+                    "label": "Quote Price",
+                    "datatype": "string"
+                },
+                {
+                    "name": "quoteDate",
+                    "label": "Quote Date",
+                    "datatype": "string"
+                },
+                {
+                    "name": "account",
+                    "label": "Account",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "accounts"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "weeklyPlan",
+            "label": "Weekly Plan",
+            "attributes": [
+                {
+                    "name": "planStartDate",
+                    "label": "Plan Start Date",
+                    "datatype": "date",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "planEndDate",
+                    "label": "Plan End Date",
+                    "datatype": "date",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "employee",
+                    "label": "Employee",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "contactsToMeet",
+                    "label": "Contacts To Meet",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "contacts"
+                },
+                {
+                    "name": "tasks",
+                    "label": "Tasks",
+                    "datatype": "string"
+                },
+                {
+                    "name": "approvalManager",
+                    "label": "Approval Manager",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "contacts"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "myTasks",
+            "label": "My Tasks",
+            "attributes": [
+                {
+                    "name": "taskStartDate",
+                    "label": "Task Start Date",
+                    "datatype": "date",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "taskEndDate",
+                    "label": "Task End Date",
+                    "datatype": "date",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "employee",
+                    "label": "Employee",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "contactsToMeet",
+                    "label": "Contacts To Meet",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "contacts"
+                },
+                {
+                    "name": "tasks",
+                    "label": "Tasks",
+                    "datatype": "string"
+                },
+                {
+                    "name": "approvalManager",
+                    "label": "Approval Manager",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "contacts"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "activities",
+            "label": "Activities",
+            "attributes": [
+                {
+                    "name": "activityOwner",
+                    "label": "ActivityOwner",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "employees"
+                },
+                {
+                    "name": "account",
+                    "label": "Account",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "accounts"
+                },
+                {
+                    "name": "contact",
+                    "label": "Contact",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "contacts"
+                },
+                {
+                    "name": "leads",
+                    "label": "Leads",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "leads"
+                },
+                {
+                    "name": "oppurtunities",
+                    "label": "Oppurtunities",
+                    "datatype": "typeAheadLookup",
+                    "lookupName": "oppurtunities"
+                },
+                {
+                    "name": "activityDetails",
+                    "label": "Activity Details",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "activityStatus",
+                    "label": "Activity Status",
+                    "datatype": "lookup",
+                    "displayPosition": "right",
+                    "lookupName": "activityStatus"
+                },
+                {
+                    "name": "activityType",
+                    "label": "Activity Type",
+                    "datatype": "lookup",
+                    "displayPosition": "right",
+                    "lookupName": "activityType"
+                },
+                {
+                    "name": "activityStartTime",
+                    "label": "Activity Start Time",
+                    "datatype": "date",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "activityEndTime",
+                    "label": "Activity End Time",
+                    "datatype": "date",
+                    "displayPosition": "right"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "employees",
+            "label": "Employees",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "datatype": "string",
+                    "isLink": true,
+                    "maxLength": 40,
+                    "isVisible": true
+                },
+                {
+                    "name": "firstName",
+                    "label": "First Name",
+                    "datatype": "string"
+                },
+                {
+                    "name": "lastName",
+                    "label": "Last Name",
+                    "datatype": "string"
+                },
+                {
+                    "name": "gender",
+                    "label": "Gender"
+                },
+                {
+                    "name": "email",
+                    "label": "Email"
+                },
+                {
+                    "name": "mobile",
+                    "label": "Mobile",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "addressLine1",
+                    "label": "Address Line",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "city",
+                    "label": "City",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "state",
+                    "label": "State",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "postal",
+                    "label": "Postal Code",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                },
+                {
+                    "name": "country",
+                    "label": "Country",
+                    "datatype": "string",
+                    "displayPosition": "right"
+                }
+            ],
+            "actionButtons": [
+                "crud",
+                "360"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ],
+            "mapping360": [
+                {
+                    "targetEntityName": "leads",
+                    "targetColumnName": "leadOwner",
+                    "sourceColumnName": "name"
+                },
+                {
+                    "targetEntityName": "oppurtunities",
+                    "targetColumnName": "oppurtunityOwner",
+                    "sourceColumnName": "name"
+                },
+                {
+                    "targetEntityName": "accounts",
+                    "targetColumnName": "accountOwner",
+                    "sourceColumnName": "name"
+                },
+                {
+                    "targetEntityName": "cases",
+                    "targetColumnName": "caseOwner",
+                    "sourceColumnName": "name"
+                }
+            ]
+        }
+    ],
+    "lookups": [
+        {
+            "name": "leadStatus",
+            "label": "Lead Status",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Lead Status",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "opportunityStage",
+            "label": "Opportunity Stage",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Opportunity Stage",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "opportunityType",
+            "label": "Opportunity Type",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Opportunity Type",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "opportunitySource",
+            "label": "Opportunity Source",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Opportunity Source",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "accountType",
+            "label": "Account Type",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Account Type",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "caseType",
+            "label": "Case Type",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Case Type",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "caseStatus",
+            "label": "Case Status",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Case Status",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "casePriority",
+            "label": "Case Priority",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Case Priority",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "activityStatus",
+            "label": "Activity Status",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Activity Status",
+                    "isLink": true
+                }
+            ]
+        },
+        {
+            "name": "activityType",
+            "label": "Activity Type",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Activity Type",
+                    "isLink": true
+                }
+            ]
+        }
+    ],
+    "autoGenerator": [
+        {
+            "id": "lead",
+            "prefix": "LD",
+            "format": "%05d"
+        },
+        {
+            "id": "oppurtunity",
+            "prefix": "OP",
+            "format": "%05d"
+        },
+        {
+            "id": "oppurtunity",
+            "prefix": "OP",
+            "format": "%05d"
+        }
+    ],
+    "charts": [
+        {
+            "title": "Lead Status",
+            "entityName": "leads",
+            "attributeName": "leadStatus",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Lead Owner",
+            "entityName": "leads",
+            "attributeName": "leadOwner",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Oppurtunity Stage",
+            "entityName": "oppurtunities",
+            "attributeName": "opportunityStage",
+            "chartName": "bar",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Oppurtunity Source",
+            "entityName": "oppurtunities",
+            "attributeName": "opportunitySource",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Oppurtunity Owner",
+            "entityName": "oppurtunities",
+            "attributeName": "oppurtunityOwner",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Oppurtunity Type",
+            "entityName": "oppurtunities",
+            "attributeName": "opportunityType",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Accounts Type",
+            "entityName": "accounts",
+            "attributeName": "accountType",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Accounts Owner",
+            "entityName": "accounts",
+            "attributeName": "accountOwner",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        },
+        {
+            "title": "Contact State",
+            "entityName": "contacts",
+            "attributeName": "state",
+            "chartName": "donut",
+            "middleTextLabel": "Total",
+            "roles": [
+                "ROLE_ADMIN",
+                "ROLE_DASHBOARD"
+            ],
+            "subText": "AS_OF"
+        }
+    ]
+}

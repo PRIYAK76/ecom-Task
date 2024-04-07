@@ -1,0 +1,84 @@
+{
+    "name":"Jaspro",
+    "entityTypes": [
+        {
+            "name": "customers",
+            "label": "Customers",
+            "iconName": "PEOPLE",
+            "attributes": [
+                {
+                    "name": "firstName",
+                    "label": "First Name",
+                    "datatype": "string"
+                },
+                {
+                    "name": "lastName",
+                    "label": "Last Name",
+                    "isVisible": false,
+                    "datatype": "string"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        },
+        {
+            "name": "products",
+            "label": "Products",
+            "iconName": "PEOPLE",
+            "attributes": [
+                {
+                    "name": "name",
+                    "label": "Name",
+                    "placeholder":"Choose",
+                    "datatype": "string"
+                },
+                {
+                    "name": "price",
+                    "label": "Price",
+                    "placeholder":"Choose",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "description",
+                    "label": "Description",
+                    "placeholder":"Choose",
+                    "datatype": "textarea"
+                },
+                {
+                    "name": "productNumber",
+                    "label": "Product Number",
+                    "placeholder":"Choose",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "availableQuantity",
+                    "label": "Available Quantity",
+                    "placeholder":"Choose",
+                    "datatype": "integer"
+                },
+                {
+                    "name": "category",
+                    "label": "Category",
+                    "placeholder":"Choose",
+                    "datatype": "string"
+                },
+                {
+                    "name": "images",
+                    "label": "Images",
+                    "placeholder":"Choose",
+                    "datatype": "blob"
+                }
+            ],
+            "actionButtons": [
+                "crud"
+            ],
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        }
+    ]
+}
