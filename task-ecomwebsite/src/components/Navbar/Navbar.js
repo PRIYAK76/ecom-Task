@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MainLogo from "../../Images/mainLogo.png";
+import MainLogo from "../../Images/attire-logo.png";
 import data from "../../datas/Navbardata.json";
 import { NavLink } from "react-router-dom";
 import { RiSearchLine } from "react-icons/ri";
