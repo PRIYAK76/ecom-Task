@@ -732,9 +732,6 @@ ul,
 ol {
   list-style-type: none;
 }
-/* body {
-  overflow-x: hidden;
-} */
 
 .row {
   display: flex;
@@ -829,10 +826,6 @@ a {
 ul,
 ol {
   list-style-type: none;
-}
-body {
-  /* overflow-x: hidden; */
-  font-family: "Rubik", sans-serif;
 }
 .container {
   /* width: 1440px !important; */
@@ -1192,6 +1185,60 @@ nav {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888; 
+}
+
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
 }
 
 /* Handle on hover */

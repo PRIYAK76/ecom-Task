@@ -22,9 +22,7 @@ const Navbar1 = () => {
 
               <button
                 className="ham-menu"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#demo"
-              >
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"              >
                 <RiMenu2Line size={25} />
               </button>
               <NavLink to="/home" className="text-decoration-none">
@@ -51,7 +49,7 @@ const Navbar1 = () => {
               </NavLink>
             </div>
             <div>
-              <div class="offcanvas offcanvas-start mob-navmenu" id="demo">
+              <div class="offcanvas offcanvas-start mob-navmenu"data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header1">
                   <h1 class="offcanvas-title sidemenu-head">Categories</h1>
                   <button
