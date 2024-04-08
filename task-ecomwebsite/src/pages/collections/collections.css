@@ -534,7 +534,7 @@ Tab {
   }
 }
 
-@media (max-width: 424px) {
+@media (max-width: 450px) {
   .product-cart-image {
     width: 172px;
     height: 210px;
@@ -558,6 +558,13 @@ Tab {
     position: relative;
   }
 }
+@media (max-width: 369px) {
+  .product-cart-image {
+    width: 150px;
+    height: 210px;
+    position: relative;
+  }
+}
 .Accordian {
   background-color: white;
   border: 1px solid #333;
@@ -576,15 +583,6 @@ Tab {
   text-align: left;
   margin-bottom: 0px;
 }
-/* 
-.Accordian-sub-title {
-  font-family: Kaisei Opti;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 0em;
-  text-align: left;
-} */
 
 .see-more-btn {
   background-color: transparent;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignIn.css";
 import { NavLink } from "react-router-dom";
-
+import MainLogo from "../../Images/mainLogo.png"
 const SignIn = () => {
 
     const [email, setEmail] = useState("");
@@ -39,12 +39,12 @@ const SignIn = () => {
         <div>
             <div className="background-img">
                 <div class="card6 container">
-                    {/* <img
+                    <img
             class="card-img-top1 mx-auto d-block"
             src={MainLogo}  alt="logo"
-          /> */}
+          />
                     <div class="card-body">
-                        <h5 class="card-title text-center mb-3 ff">SIGN IN</h5>
+                        {/* <h5 class="card-title mb-3 ff">Sign In</h5> */}
                         <form>
                             <div class="form-row align-items-center">
                                 <div class="col-sm-12 my-3">
@@ -74,7 +74,7 @@ const SignIn = () => {
                                         <input
                                             type="checkbox"
                                             id="rememberMeCheckbox"
-                                        />
+                                        />&nbsp;&nbsp;
                                         {/* <div class={`checkbox ${isChecked ? 'checked' : ''}`}></div> */}
                                         <label class="form-check-label ff remember" for="autoSizingCheck2">
                                             Remember me

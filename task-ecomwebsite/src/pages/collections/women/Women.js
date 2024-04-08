@@ -8,16 +8,24 @@ import { NavLink } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import "../collections.css";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 // import { fetchProductRequest } from "../../actions/ProductActions";
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
+import { add } from "../../../store/cartSlice";
 
 const Women = () => {
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    console.log(product)
+    console.log("Product to be added to cart:", product);
 
+    dispatch(add(product))
+  };
   return (
     <Layout>
+
       {data.productsimg
         .filter((item) => item.name === "women")
         .map((items) => (
@@ -61,7 +69,7 @@ const Women = () => {
                     </div></div>
                   <div className="d-flex mx-auto ">
                     {/* Add to cart &nbsp; */}
-                    <BsFillCartPlusFill size={25} />
+                    <BsFillCartPlusFill size={25} style={{"cursor" : "pointer"}} onClick={() => handleAddToCart(product)} />
                   </div>
                 </div>
               </div>

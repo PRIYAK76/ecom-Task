@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MainLogo from "../../Images/navbar-logo.png";
+import MainLogo from "../../Images/attire-logo.png";
 import data from "../../datas/Navbardata.json";
 import { NavLink } from "react-router-dom";
 import { RiSearchLine } from "react-icons/ri";
@@ -27,8 +27,14 @@ const Navbar1 = () => {
               >
                 <RiMenu2Line size={25} />
               </button>
-              <div>Jaspo</div>
-              <NavLink to="/addtocart">
+              <NavLink to="/home" className="text-decoration-none">
+                  <li>
+                    <a href="#" className="pt-3">
+                      <img src={MainLogo} className="navbar-brand" />
+                    </a>
+                  </li>
+                </NavLink>
+              <NavLink to="/cartItems">
                 <svg
                   class="mobmenu-icons"
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +101,7 @@ const Navbar1 = () => {
           <div class="main_menu">
             <ul className="nav-items d-flex bd-highlight">
               <div>
-                <NavLink to="/" className="text-decoration-none">
+                <NavLink to="/home" className="text-decoration-none">
                   <li>
                     <a href="#" className="pt-3">
                       <img src={MainLogo} className="navbar-brand" />
@@ -181,7 +187,7 @@ const Navbar1 = () => {
                   </li>
                 </NavLink>
 
-                <NavLink to="/kids" className="text-decoration-none">
+                {/* <NavLink to="/kids" className="text-decoration-none">
                   <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
                     <a href="#">Kids</a>
                     <div class="mega_menu sub_menu d-flex justify-content-evenly">
@@ -217,7 +223,7 @@ const Navbar1 = () => {
                       </div>
                     </div>
                   </li>
-                </NavLink>
+                </NavLink> */}
               </div>
 
               <div className="d-flex">
@@ -237,7 +243,7 @@ const Navbar1 = () => {
                       </form>
                     </div>
                   </li>
-                  <NavLink to="/addtocart">
+                  <NavLink to="/cartItems">
                     <li className="mx-2">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -252,6 +258,7 @@ const Navbar1 = () => {
                         />
                       </svg>
                     </li>
+                    
                   </NavLink>
                   <li className="mx-2">
                     <svg

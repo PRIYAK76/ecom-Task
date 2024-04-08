@@ -60,36 +60,5 @@
       "Jackets & Sweatshirts",
       "Swimwear"
     ]    
-  },
-
-  "Kids":{
-    "id": "Boys Clothing",
-    "types":[
-      "T-shirts",
-      "Shirts",
-      "Jeans",
-      "Trousers",
-      "Ethnic Wear",
-      "Party Wear"
-    ],
-
-    "categories": "Girls Clothing",
-    "kinds": [
-      "Dresses",
-      "Clothing sets",
-      "Dungarees & Jumpsuits",
-      "Tights & Leggings",
-      "Nightwear & Loungewear"
-    ],
-
-    "sorts": "Infants",
-    "sort": [
-      "Bodysuits",
-      "Rompers & Sleepsuits",
-      "Clothing sets",
-      "Bottom wear",
-      "Winter wear"
-    ]    
   }
-
 }
