@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MainLogo from "../../Images/navbar-logo.png";
+import MainLogo from "../../Images/mainLogo.png";
 import data from "../../datas/Navbardata.json";
 import { NavLink } from "react-router-dom";
 import { RiSearchLine } from "react-icons/ri";
@@ -27,7 +27,13 @@ const Navbar1 = () => {
               >
                 <RiMenu2Line size={25} />
               </button>
-              <div>Jaspo</div>
+              <NavLink to="/home" className="text-decoration-none">
+                  <li>
+                    <a href="#" className="pt-3">
+                      <img src={MainLogo} className="navbar-brand" />
+                    </a>
+                  </li>
+                </NavLink>
               <NavLink to="/addtocart">
                 <svg
                   class="mobmenu-icons"
@@ -95,7 +101,7 @@ const Navbar1 = () => {
           <div class="main_menu">
             <ul className="nav-items d-flex bd-highlight">
               <div>
-                <NavLink to="/" className="text-decoration-none">
+                <NavLink to="/home" className="text-decoration-none">
                   <li>
                     <a href="#" className="pt-3">
                       <img src={MainLogo} className="navbar-brand" />

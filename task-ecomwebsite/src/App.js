@@ -4,7 +4,7 @@ import "../node_modules/jquery/dist/jquery";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import SignIn from "./components/signIn/SignIn";
-import Home from './pages/home/Home';
+import Home from './pages/Home/Home';
 import ForgotPassWord from './components/forgotPassword/ForgotPassWord';
 import Men from './pages/collections/men/Men';
 import Women from './pages/collections/women/Women';
@@ -14,9 +14,6 @@ import Cart from './pages/cart/Cart';
 function App() {
   return (
     <Router>
-      <div style={{
-        background: "linear-gradient(180deg, #F8F3F5 0%, #F8F2EF 33.85%)"
-      }}>
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/home" element={<Home />} />
@@ -26,7 +23,6 @@ function App() {
           <Route path="/forgotPassword" element={<ForgotPassWord />} />
           <Route path="/cartItems" element={<Cart />} />
         </Routes>
-      </div>
     </Router>
   );
 }

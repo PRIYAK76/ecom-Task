@@ -910,6 +910,9 @@ nav {
   top: 0;
 }
 
+.navbar-brand{
+  height: 40px;
+}
 /* mega menu css */
 .mega_menu_dropdown {
   position: static !important;

@@ -1,0 +1,234 @@
+.herosection-image1 {
+  height: 35vh;
+  float: right;
+}
+
+.herosection-image2 {
+  height: 60vh;
+}
+
+.herosection-image3 {
+  height: 100vh;
+  /* width: 300px; */
+  float: right;
+}
+
+.column-center {
+  width: 35vw;
+  padding: 50px 150px 100px;
+}
+
+.column-left {
+  width: 25vw;
+}
+
+.column-right {
+  width: 50vw;
+}
+
+.herosection-title {
+  font-family: Kaisei Opti;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 101px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.herosection-sub-title {
+  font-family: Kaisei Opti;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.herosection-btn {
+  padding: 10px 100px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.home-section-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.home-section-sub-title {
+  font-family: Kaisei Opti;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.home-page-image-background {
+  width: 80vw;
+}
+
+.home-sec-card-title {
+  font-family: Kaisei Opti;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.home-section-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-section-main-1 {
+  display: flex;
+}
+
+.product-card-footer{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 1400px) {
+  .column-center {
+    width: 900px;
+    padding: 100px 150px 100px;
+  }
+
+  .home-page-image-background {
+    width: 72vw;
+  }
+}
+
+@media (max-width: 1300px) {
+  .column-center {
+    width: 900px;
+    padding: 30px 80px 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  .home-section-cards {
+    display: block;
+  }
+
+  .home-sec-card {
+    margin-left: 130px;
+  }
+
+  .hero-section-main-1 {
+    display: block;
+  }
+
+  .herosection-image1 {
+    display: none;
+  }
+
+  .herosection-image2 {
+    width: 80vw;
+    height: 50vh;
+  }
+
+  .herosection-image3 {
+    width: 80vw;
+    float: none;
+    height: 50vh;
+    margin-left: 80px;
+  }
+
+  .column-center {
+    width: 60vw;
+    padding: 10px 0px 0px;
+    margin: auto;
+  }
+
+  .column-left {
+    width: 0vw;
+  }
+
+  .column-right {
+    width: 0vw;
+  }
+
+  .herosection-title {
+    font-family: Kaisei Opti;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .herosection-sub-title {
+    font-family: Kaisei Opti;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .herosection-btn {
+    padding: 10px 50px;
+    margin-bottom: 50px;
+  }
+
+  .home-section-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .home-section-sub-title {
+    font-family: Kaisei Opti;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .home-page-image-background {
+    width: 90vw;
+    /* height: 30vh; */
+  }
+  
+  .product-card-footer{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 385px) {
+  .herosection-image3 {
+    width: 80vw;
+    float: none;
+    height: 50vh;
+    margin-left: 70px;
+  }
+
+  .column-center {
+    width: 80vw;
+    padding: 10px 0px 0px;
+    margin: auto;
+  }
+
+  
+  .home-sec-card {
+    margin-left: 100px;
+  }
+
+}
