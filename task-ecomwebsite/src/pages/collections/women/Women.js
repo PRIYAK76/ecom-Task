@@ -18,6 +18,7 @@ const Women = () => {
 
   return (
     <Layout>
+
       {data.productsimg
         .filter((item) => item.name === "women")
         .map((items) => (

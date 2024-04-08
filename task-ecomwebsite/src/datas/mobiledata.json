@@ -86,53 +86,5 @@
         ]
       }
     ]
-  },
-
-  {
-    "name": "Kids",
-    "navlink":"/kids",
-    "subMenu": [
-      {
-        "title": "Boys Clothing",
-        "products": [
-          "T-shirts",
-          "Shirts",
-          "Shorts",
-          "Jeans",
-          "Trousers",
-          "Ethnic Wear",
-          "Party Wear"
-        ]
-      },
-
-      {
-        "title": "Girls Clothing",
-        "products": [
-          "Dresses",
-          "Tops",
-          "Tshirts",
-          "Clothing sets",
-          "Lehengha Cholis",
-          "Kurta Sets",
-          "Party Wear",
-          "Dungarees & Jumpsuits",
-          "Tights & Leggings",
-          "Nightwear & Loungewear",
-          "Jeans, Trousers & Sweatshirts1"
-        ]
-      },
-
-      {
-        "title": "Infants",
-        "products": [
-          "Bodysuits",
-          "Rompers & Sleepsuits",
-          "Clothing sets",
-          "Bottom wear",
-          "Winter wear",
-          "Infant Care"
-        ]
-      }
-    ]
   }
 ]

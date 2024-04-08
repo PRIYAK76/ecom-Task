@@ -13,11 +13,20 @@ import "../collections.css";
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
+import { useDispatch } from "react-redux"
+import { add } from "../../../store/cartSlice";
 
 const Men = () => {
+  
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    console.log(product)
+    console.log("Product to be added to cart:", product);
+
+    dispatch(add(product))
+  };
     return (
         <Layout>
-          
           {data.productsimg
         .filter((item) => item.name === "men")
         .map((items) => (
@@ -61,7 +70,7 @@ const Men = () => {
                     </div></div>
                   <div className="d-flex mx-auto ">
                     {/* Add to cart &nbsp; */}
-                    <BsFillCartPlusFill size={25} />
+                    <BsFillCartPlusFill size={25} style={{"cursor" : "pointer"}} onClick={() => handleAddToCart(product)}/>
                   </div>
                 </div>
               </div>
