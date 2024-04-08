@@ -3,6 +3,7 @@ import "../Home/Home.css";
 import Herosectionimg1 from "../../Images/herosecimg1.png";
 import Herosectionimg2 from "../../Images/Hero-section-image-2.png";
 import Herosectionimg3 from "../../Images/herosecimg1.png";
+import Mainbanner from "../../Images/mainbannerattiremainbanner.png"
 import Homecardimg1 from "../../Images/Card-image-home-1.png";
 import Homecardimg2 from "../../Images/Card-image-home-2.png";
 import Homecardimg3 from "../../Images/Card-image-home-3.png";
@@ -15,6 +16,7 @@ const Home = () => {
   const Explorecards1 = data.Exploreproductcards;
   return (
     <Layout>
+
       <div className="hero-section-main-1 mt-3">
         {/* <div className="column-left">
           <img class="herosection-image1 mb-4" src={Herosectionimg1} alt="logo" />
@@ -31,6 +33,7 @@ const Home = () => {
       </div>
 
       <div className=" container mt-3">
+
           <h1 className="home-section-title">Why Choosing Us</h1>
           <p className="home-section-sub-title">A style that permeates everything. We are attempting once more 
           to combine a high-end product presentation with contemporary usability.</p>
@@ -52,6 +55,8 @@ const Home = () => {
               <p className="home-sec-card-title">Secure Payment</p>
             </div>
           </div>
+          <img src={Mainbanner} className="home-page-image-background container"/>
+
       </div>
     </Layout>
   );
