@@ -5,44 +5,46 @@ import { useSelector } from "react-redux"
 import Layout from '../../components/layout/Layout';
 import "./Cart.css"
 import { NavLink } from 'react-router-dom';
+import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
+import { FaIndianRupeeSign } from "react-icons/fa6";
 
 const Cart = () => {
   const products = useSelector(state => state.cart);
   const dispatch = useDispatch();
-  const [counter, setCounter] = useState(1);
+  // const [counter, setCounter] = useState(1);
 
   const [selectedValue, setSelectedValue] = useState(1);
 
   const [quantities, setQuantities] = useState({});
-  const handleSelectChange = (event) => {
-    const value = event.target.value;
-    setSelectedValue(value);
-  }
-
-  const increment = () => {
-    setCounter(counter + 1);
-  };
-
-  const decrement = () => {
-    setCounter(counter == 1 ? 1 : counter - 1);
-
-  };
-
+  // const handleSelectChange = (event) => {
+  //   const value = event.target.value;
+  //   setSelectedValue(value);
+  // }
 
   const removeProduct = (id) => {
     console.log(id)
     dispatch(remove(id))
   };
 
-  const priceUpdate = (v) => {
-    console.log(v);
-  }
+  // const priceUpdate = (v) => {
+  //   console.log(v);
+  // }
 
   const updateQuantity = (id, newQuantity) => {
     setQuantities((prevQuantities) => ({
       ...prevQuantities,
       [id]: newQuantity,
     }));
+  };
+
+  const getTotalPrice = () => {
+    let totalPrice = 0;
+    products.forEach((product) => {
+      const quantity = quantities[product.productId] || 1;
+      totalPrice += product.price * quantity;
+    });
+    return totalPrice;
   };
 
   const cartsProducts = products.map((i) => (
@@ -71,28 +73,23 @@ const Cart = () => {
 
             <div className="mob-des">
               <div className="quantity-selector ms-4">
-                <label for="selector">Qty:</label>
+                <div className='d-flex'>
+                  <label for="selector" className='qty-text-mobile'>Qty:</label>
+                  <button
+                    className='quantity-button'
+                    onClick={() => updateQuantity(i.productId, quantities[i.productId] !== undefined ? Math.max(1, quantities[i.productId] - 1) : 1)}          >
+                    <CiCircleMinus size={28} />
+                  </button>
+                  <h6 className='qty-display'>{quantities[i.productId] || 1}</h6>
+                  <button
+                    className='quantity-button'
+                    onClick={() => updateQuantity(i.productId, (quantities[i.productId] || 1) + 1)}>
+                    <CiCirclePlus size={28} />
+                  </button>
+                </div>
 
-                {/* <select
-                name="selector"
-                size="1"
-                onclick="size=(size!=1)?1:10;"
-                onblur="size=1"
-                className="qnt-sel ms-1"
-              >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select> */}
               </div>
-              <div className="fw-bold">{i.price}/-</div>
+              <div className="fw-bold">{quantities[i.productId]}*{i.price}/-</div>
             </div>
 
             <button className="rem-btn" onClick={() => removeProduct(i.productId)}>Remove</button>
@@ -101,51 +98,25 @@ const Cart = () => {
       </div>
 
       <div className="quant text-center">
-        {/* <h6>QUANTITY</h6> */}
-        {/* <div className="quantity-selector">
-          <select
-            name="selector"
-            size="1"
-            onclick="size=(size!=1)?1:10;"
-            onblur="size=1"
-            className="qnt-sel"
-            value={selectedValue}
-            onChange={handleSelectChange}
-          >
-            <option value="0">0</option> 
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-
-          <p>{selectedValue}</p>
-        </div> */}
-        <button
-                  onClick={() => updateQuantity(i.id, quantities[i.id] !== undefined ? Math.max(1, quantities[i.id] - 1) : 1)}
-                >
-                  -
-                </button>
-                {quantities[i.id] || 1}
-                <button onClick={() => updateQuantity(i.id, (quantities[i.id] || 1) + 1)}>
-                  +
-                </button>
+        <div className='d-flex'>
+          <button
+            className='quantity-button'
+            onClick={() => updateQuantity(i.productId, quantities[i.productId] !== undefined ? Math.max(1, quantities[i.productId] - 1) : 1)}          >
+            <CiCircleMinus size={28} />
+          </button>
+          <h6 className='qty-display'>{quantities[i.productId] || 1}</h6>
+          <button
+            className='quantity-button'
+            onClick={() => updateQuantity(i.productId, (quantities[i.productId] || 1) + 1)}>
+            <CiCirclePlus size={28} />
+          </button>
+        </div>
       </div>
 
       <div className="total-amt text-center">
         {/* <h6>PRICE</h6> */}
         <div className=" fw-bold">{i.price * selectedValue}/-</div>
       </div>
-
-      {/* <div className="total text-center">
-    <div className="pt-3 fw-bold">$289</div>
-  </div> */}
     </div>
   ))
   return (
@@ -153,26 +124,43 @@ const Cart = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-8">
-            <div className="d-flex justify-content-between shopping-cart head-border mt-0">
+            {cartsProducts?.length > 0 ? <div><div className="d-flex justify-content-between shopping-cart head-border mt-0">
               <h5 className="fw-bold">Shopping Cart</h5>
               <h5 className="fw-bold"> items</h5>
-
             </div>
-
-            <div className="pt-3 header-table d-flex justify-content-between">
-              <h6 className="pd me-5 fw-bold">PRODUCT DETAILS</h6>
-              <h6 className="qnt fw-bold">QUANTITY</h6>
-              {/* <h6 className="pr ms-5 fw-bold">PRICE</h6> */}
-              <h6 className="td fw-bold">PRICE</h6>
-            </div>
-            {cartsProducts}
+              <div className="pt-3 header-table d-flex justify-content-between">
+                <h6 className="pd me-5 fw-bold">PRODUCT DETAILS</h6>
+                <h6 className="qnt fw-bold">QUANTITY</h6>
+                {/* <h6 className="pr ms-5 fw-bold">PRICE</h6> */}
+                <h6 className="td fw-bold">PRICE</h6>
+              </div></div>
+              : <div></div>}
+            {cartsProducts?.length > 0 ? cartsProducts : <div>
+              <h1 className='text-center mt-4'><CiShoppingCart size={80} /></h1>
+              <h2 className='text-center'>Your cart is empty</h2>
+              <p className='text-center mb-5'>Looks like you have not added any items to cart. Go ahead and explore </p>
+            </div>}
           </div>
         </div>
         <NavLink to="/men"><button className="cont-btn fw-bold pt-4">
           &larr; Continue shopping
         </button></NavLink>
       </div>
-      {console.log('Updated products:', products)}
+      <hr />
+      <div className='d-flex justify-content-end container'>
+        <h6 className='shopping-cart-estimate'>Estimated total : <span className='text-light-css'> &nbsp;<FaIndianRupeeSign />{getTotalPrice()}.00 INR</span> </h6>
+      </div>
+      <div className='d-flex justify-content-end container'>
+        <h6>Taxes, discounts and shipping calculated at checkout</h6>
+      </div>
+      <div className='d-flex justify-content-end container'>
+        {getTotalPrice() > 0 ?
+          <NavLink to="/checkOut">
+            <button className='checkout-cart-btn my-3'>Check out</button>
+          </NavLink> :
+          <button className='checkout-cart-btn my-3'>Check out</button>
+        }
+      </div>
     </Layout>
   )
 }

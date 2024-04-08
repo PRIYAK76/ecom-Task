@@ -1,0 +1,24 @@
+.prd-img-checkout{
+    height: 80px;
+}
+
+.paypal-btn{
+    background: #0070ba;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+@media(max-width:450px){
+    .col-6-edited{
+        width: 100% !important;
+    }
+
+    .col-mob-6{
+        margin-top: 50px;
+
+    }
+}

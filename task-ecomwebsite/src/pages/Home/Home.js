@@ -7,11 +7,7 @@ import Homecardimg1 from "../../Images/Card-image-home-1.png";
 import Homecardimg2 from "../../Images/Card-image-home-2.png";
 import Homecardimg3 from "../../Images/Card-image-home-3.png";
 import Homecardimg4 from "../../Images/Card-image-home-4.png";
-import SummerWinter from "../../Images/Home-page-bg-image.png";
 import data from "../../datas/Collections-items.json";
-import { IoIosStar } from "react-icons/io";
-import { IoMdHeartEmpty } from "react-icons/io";
-import { BsFillCartPlusFill } from "react-icons/bs";
 import Layout from "../../components/layout/Layout";
 
 const Home = () => {
@@ -55,36 +51,7 @@ const Home = () => {
               <p className="home-sec-card-title">Secure Payment</p>
             </div>
           </div>
-          <div className="mt-5">
-            <img src={SummerWinter} alt="summers winter" className="home-page-image-background"/>
-          </div>
       </div>
-
-      {/* <div className="explore-section my-5 container">
-        <h1 className="home-section-title">Explore now</h1>
-        <div className="d-flex new-arrivals-product-card">
-          {Explorecards1.map((product) => (
-            <div className="product-card">
-            <img
-              src={product.img}
-              className="product-cart-image"
-            />
-            <span><IoMdHeartEmpty size={27} className="wishlist-icon"/></span>
-            <h1 className="product-card-name mt-2 text-center">{product.name}</h1>
-            <div className="product-card-footer">
-                  <p className="product-card-price mt-1">{product.price}&nbsp;&nbsp;</p>
-                  <div className="stars">
-                    <IoIosStar color="#FAC231"/><IoIosStar  color="#FAC231"/><IoIosStar  color="#FAC231"/><IoIosStar  color="#FAC231"/><IoIosStar  color="#FAC231"/>
-                  </div>
-            </div>
-            <button className="d-flex mx-auto add-to-cart-btn">
-                Add to cart &nbsp;<BsFillCartPlusFill size={22}/>
-            </button>
-            </div>
-            ))}
-        </div>
-      </div> */}
-      
     </Layout>
   );
 };

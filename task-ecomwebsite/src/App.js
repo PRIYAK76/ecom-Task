@@ -10,6 +10,7 @@ import Men from './pages/collections/men/Men';
 import Women from './pages/collections/women/Women';
 import ProductPage from './pages/Product Page/ProductPage';
 import Cart from './pages/cart/Cart';
+import CheckOut from './pages/checkOut/CheckOut';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products/:productID" element={<ProductPage />} />
           <Route path="/forgotPassword" element={<ForgotPassWord />} />
           <Route path="/cartItems" element={<Cart />} />
+          <Route path="/checkOut" element={<CheckOut />} />
         </Routes>
     </Router>
   );

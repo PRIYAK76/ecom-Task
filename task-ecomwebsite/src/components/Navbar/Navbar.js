@@ -34,7 +34,7 @@ const Navbar1 = () => {
                     </a>
                   </li>
                 </NavLink>
-              <NavLink to="/addtocart">
+              <NavLink to="/cartItems">
                 <svg
                   class="mobmenu-icons"
                   xmlns="http://www.w3.org/2000/svg"
@@ -258,6 +258,7 @@ const Navbar1 = () => {
                         />
                       </svg>
                     </li>
+                    
                   </NavLink>
                   <li className="mx-2">
                     <svg

@@ -1,0 +1,46 @@
+.footer-section {
+  background: rgb(27, 27, 27);
+}
+
+.copy-right-text {
+  font-family: Kaisei Opti;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media (max-width: 950px) {
+  .section-footer {
+    display: block !important;
+    margin: auto;
+  }
+
+  .copy-right-text {
+    display: block !important;
+  }
+
+  .copy-right-text {
+    font-family: Kaisei Opti;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-logoo {
+    margin-left: 120px;
+  }
+
+  .copy-right-text{
+    margin-bottom: 40px !important;
+    margin-top: -20px !important;
+  }
+  /* .input-group {
+    margin-left: 35px;
+  } */
+}
