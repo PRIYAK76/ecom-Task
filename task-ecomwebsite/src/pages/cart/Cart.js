@@ -86,7 +86,7 @@ const Cart = () => {
                     onClick={() => updateQuantity(i.productId, quantities[i.productId] !== undefined ? Math.max(1, quantities[i.productId] - 1) : 1)}          >
                     <CiCircleMinus size={28} />
                   </button>
-                  <h6 className='qty-display'>{quantities[i.productId] || 1}</h6>
+                  <h6 className='qty-display mx-1'>{quantities[i.productId] || 1}</h6>
                   <button
                     className='quantity-button'
                     onClick={() => updateQuantity(i.productId, (quantities[i.productId] || 1) + 1)}>
@@ -110,7 +110,7 @@ const Cart = () => {
             onClick={() => updateQuantity(i.productId, quantities[i.productId] !== undefined ? Math.max(1, quantities[i.productId] - 1) : 1)}          >
             <CiCircleMinus size={28} />
           </button>
-          <h6 className='qty-display'>{quantities[i.productId] || 1}</h6>
+          <h6 className='qty-display mx-2'>{quantities[i.productId] || 1}</h6>
           <button
             className='quantity-button'
             onClick={() => updateQuantity(i.productId, (quantities[i.productId] || 1) + 1)}>

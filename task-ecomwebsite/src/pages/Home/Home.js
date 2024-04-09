@@ -1,6 +1,9 @@
 import React from "react";
 import "../Home/Home.css";
 import Herosectionimg3 from "../../Images/herosecimg1.png";
+import Herosectionimag5 from "../../Images/herosectionimag5.png";
+import heroimg6 from "../../Images/heroimg6.png"
+import heroimg7 from "../../Images/heroimg7.png"
 import Mainbanner from "../../Images/mainbannerattiremainbanner.png"
 import Homecardimg1 from "../../Images/Card-image-home-1.png";
 import Homecardimg2 from "../../Images/Card-image-home-2.png";
@@ -17,8 +20,8 @@ const Home = () => {
 
       <div className="hero-section-main-1 mt-3">
         {/* <div className="column-left">
-          <img class="herosection-image1 mb-4" src={Herosectionimg1} alt="logo" />
-          <img class="herosection-image2" src={Herosectionimg2} alt="logo" />
+          <img class="herosection-image1 mb-4" src={heroimg6} alt="logo" />
+          <img class="herosection-image2" src={Herosectionimag5} alt="logo" />
         </div> */}
         <div className="mx-auto column-center">
             <h1 className="herosection-title">The joy of dressing is an art</h1>
