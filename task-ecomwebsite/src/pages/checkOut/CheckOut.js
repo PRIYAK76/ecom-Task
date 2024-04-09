@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./CheckOut.css";
 import Navbar from "../../components/Navbar/Navbar"
 import { useSelector } from "react-redux"
+import { TiTick } from "react-icons/ti";
 
 const CheckOut = () => {
     const products = useSelector(state => state.cart);
     const totalAmt = useSelector(state => state.price);
-
+    const [checBtn, setCheckbtn] = useState(false)
     return (
         <div>
             <Navbar />
@@ -51,7 +52,7 @@ const CheckOut = () => {
                     </form>
                 </div>
                 <div className='col-6 col-6-edited col-mob-6'>
-                    {products.map((i) => (
+                    {products?.map((i) => (
                         <div className="cart-content ">
                             <div className="d-flex justify-content-between ">
                                 <img
@@ -71,7 +72,10 @@ const CheckOut = () => {
                         <h4>Total</h4>
                         <h4>Rs.{totalAmt} /-</h4>
                     </div>
-                    <div><button className='paypal-btn'>Pay with Paypal</button></div>
+                    <div><button className='paypal-btn' onClick={() => setCheckbtn(!checBtn)} type='submit'>Pay with Paypal</button></div>
+                    {checBtn && <div class="alert alert-success mt-4" role="alert">
+                        <TiTick size={29} /> Order Placed successfully !!!
+                    </div>}
                 </div>
             </div>
         </div>
