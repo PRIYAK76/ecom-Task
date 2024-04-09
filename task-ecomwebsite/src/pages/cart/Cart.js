@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from "react-redux";
 import { remove } from '../../store/cartSlice';
+import { totalPriceSet } from "../../store/priceReducer"
 import { useSelector } from "react-redux"
 import Layout from '../../components/layout/Layout';
 import "./Cart.css"
@@ -13,7 +14,6 @@ const Cart = () => {
   const products = useSelector(state => state.cart);
   const dispatch = useDispatch();
   // const [counter, setCounter] = useState(1);
-
   const [selectedValue, setSelectedValue] = useState(1);
 
   const [quantities, setQuantities] = useState({});
@@ -36,6 +36,7 @@ const Cart = () => {
       ...prevQuantities,
       [id]: newQuantity,
     }));
+    
   };
 
   const getTotalPrice = () => {
@@ -47,6 +48,11 @@ const Cart = () => {
     return totalPrice;
   };
 
+  const  getTotalPriceForCheckoue = () => {
+    const totalPrice = getTotalPrice();
+    dispatch(totalPriceSet(totalPrice))
+
+  }
   const cartsProducts = products.map((i) => (
     <div className="cart-content justify-content-between">
       <div className="prd-det">
@@ -89,7 +95,7 @@ const Cart = () => {
                 </div>
 
               </div>
-              <div className="fw-bold">{quantities[i.productId]}*{i.price}/-</div>
+              <div className="fw-bold">{quantities[i?.productId] > 0 ? quantities[i?.productId]*i?.price : i?.price}/-</div>
             </div>
 
             <button className="rem-btn" onClick={() => removeProduct(i.productId)}>Remove</button>
@@ -156,7 +162,7 @@ const Cart = () => {
       <div className='d-flex justify-content-end container'>
         {getTotalPrice() > 0 ?
           <NavLink to="/checkOut">
-            <button className='checkout-cart-btn my-3'>Check out</button>
+            <button className='checkout-cart-btn my-3' onClick={() => getTotalPriceForCheckoue()}>Check out</button>
           </NavLink> :
           <button className='checkout-cart-btn my-3'>Check out</button>
         }
