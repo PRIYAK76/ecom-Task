@@ -121,7 +121,7 @@ const Cart = () => {
 
       <div className="total-amt text-center">
         {/* <h6>PRICE</h6> */}
-        <div className=" fw-bold">{i.price * selectedValue}/-</div>
+        <div className=" fw-bold">{quantities[i?.productId] > 0 ? quantities[i?.productId]*i?.price : i?.price}/-</div>
       </div>
     </div>
   ))
@@ -160,12 +160,13 @@ const Cart = () => {
         <h6>Taxes, discounts and shipping calculated at checkout</h6>
       </div>
       <div className='d-flex justify-content-end container'>
-        {getTotalPrice() > 0 ?
+         {getTotalPrice() == 0 &&          
+         <button className='checkout-cart-btn my-3'>Check out</button>
+          }
+          {getTotalPrice() > 0 &&
           <NavLink to="/checkOut">
-            <button className='checkout-cart-btn my-3' onClick={() => getTotalPriceForCheckoue()}>Check out</button>
-          </NavLink> :
-          <button className='checkout-cart-btn my-3'>Check out</button>
-        }
+            <button className='checkout-cart-btn1 my-3' onClick={() => getTotalPriceForCheckoue()}>Check out</button>
+          </NavLink>}
       </div>
     </Layout>
   )
