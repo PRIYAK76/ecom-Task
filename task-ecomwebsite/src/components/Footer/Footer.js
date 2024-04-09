@@ -1,8 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { IoCall } from "react-icons/io5";
-import { MdMail } from "react-icons/md";
-import footerlogo from "../../Images/Footer-logo.png";
 import { LuInstagram } from "react-icons/lu";
 import { BiLogoFacebook } from "react-icons/bi";
 import { FaLinkedinIn , FaRegCopyright} from "react-icons/fa";

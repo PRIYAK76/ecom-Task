@@ -1,7 +1,5 @@
 import React from "react";
 import "../Home/Home.css";
-import Herosectionimg1 from "../../Images/herosecimg1.png";
-import Herosectionimg2 from "../../Images/Hero-section-image-2.png";
 import Herosectionimg3 from "../../Images/herosecimg1.png";
 import Mainbanner from "../../Images/mainbannerattiremainbanner.png"
 import Homecardimg1 from "../../Images/Card-image-home-1.png";
