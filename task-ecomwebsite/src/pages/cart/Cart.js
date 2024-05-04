@@ -20,6 +20,7 @@ const Cart = () => {
   // const handleSelectChange = (event) => {
   //   const value = event.target.value;
   //   setSelectedValue(value);
+  //njnjknj
   // }
 
   const removeProduct = (id) => {
